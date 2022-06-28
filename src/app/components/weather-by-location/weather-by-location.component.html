@@ -1,0 +1,56 @@
+<h2 style="text-align: center">What's The Weather</h2>
+<div class="form-container">
+  <form [formGroup]="weatherForm" class="form">
+    <div>
+      <label class="mr-10">City</label>
+      <input type="text" placeholder="City" formControlName="city" />
+    </div>
+    <div>
+      <label class="mr-10">Postal code</label>
+      <input type="text" placeholder="Postal code" formControlName="zipcode" />
+    </div>
+  </form>
+
+  <button class="button-3" type="Submit" (click)="onSubmit(weatherForm)">
+    Show Weather Info
+  </button>
+  <!-- <button type="Submit" (click)="onSubmit(weatherForm, 'days')">
+    Next 10 days
+  </button> -->
+</div>
+<div class="current-weather-container">
+  <div class="header-info">
+    <h2>Current Weather</h2>
+    <p>{{ currWeather.day }}</p>
+
+  </div>
+
+  <div>
+    <label>Temp</label>
+    <p>
+      <ng-container *ngIf="currTempMode === 'celcius'"
+        >{{ this.currWeather.tempCelcius }} C</ng-container
+      >
+      <ng-container *ngIf="currTempMode === 'farenheit'"
+        >{{ this.currWeather.tempCelcius }} C</ng-container
+      >
+    </p>
+  </div>
+  <div>
+    <label>Weather</label>
+    <p>{{ this.currWeather.weatherDescription }}</p>
+  </div>
+
+  <div>
+    <label>Wind</label>
+    <p>{{ this.currWeather.wind }}</p>
+  </div>
+  <div>
+    <label>Humidity</label>
+    <p>{{ this.currWeather.humidity }}</p>
+  </div>
+  <div>
+    <label>Pressure</label>
+    <p>{{ this.currWeather.pressure }}</p>
+  </div>
+</div>

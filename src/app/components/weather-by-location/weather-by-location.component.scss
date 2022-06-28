@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-input {
+  display: flex;
+  justify-content: space-between;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+input {
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  background-color: #fff;
+  font-family: inherit;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  min-width: 250px;
+  font-size: 10px;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  background: #5e5df0;
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  width: auto;
+  border: 0;
+}
+
+.current-weather-container{
+    background-color: #9BC1BC;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+.header-info{
+    padding: 10px;
+    margin-bottom: 10px;
+}
